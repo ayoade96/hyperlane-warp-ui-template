@@ -44,7 +44,7 @@ function FooterLogo() {
       </div>
       <div className="ml-6 space-y-1 text-lg font-medium sm:text-xl">
         <div>Go interchain</div>
-        <div>with Hyperlane</div>
+        <div>with Dambaz Warp</div>
       </div>
     </div>
   );

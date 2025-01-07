@@ -2,5 +2,23 @@
 # These configs will be merged with the warp routes in the configured registry
 # The input here is typically the output of the Hyperlane CLI warp deploy command
 ---
-tokens: []
+tokens:
+      - chainName: arbitrum
+        standard: EvmHypCollateral
+        decimals: 6
+        symbol: USDT
+        name: Tether USD
+        addressOrDenom: "0x90640955B254cD590b3d5e2799CA6aF1c64BD962"
+        collateralAddressOrDenom: "0xFd086bC7CD5C481DCC9C85ebE478A1C0b69FCbb9"
+        connections:
+          - token: ethereum|optimism|0x90640955B254cD590b3d5e2799CA6aF1c64BD962
+      - chainName: optimism
+        standard: EvmHypSynthetic
+        decimals: 6
+        symbol: USDT
+        name: Tether USD
+        addressOrDenom: "0x90640955B254cD590b3d5e2799CA6aF1c64BD962"
+        connections:
+          - token: ethereum|arbitrum|0x90640955B254cD590b3d5e2799CA6aF1c64BD962
+
 options: {}
